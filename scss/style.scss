@@ -1,0 +1,293 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+   &-wrapper {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &-menu {
+      &__list {
+         display: flex;
+         justify-content: space-between;
+         width: 527px;
+      }
+      &__link {
+         font-size: 18px;
+         line-height: 27px;
+         text-transform: uppercase;
+      }
+   }
+   &-btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      img {
+         width: 18px;
+         height: 18px;
+      }
+      &:not(:last-child) {
+         margin-right: 35px;
+      }
+   }
+}
+.intro {
+   height: 94vh;
+   background: url(../images/intro-bg.jpg) no-repeat center center / cover;
+   &__wrapper {
+      height: 94vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+   }
+   &__overhead {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+   }
+   &__title {
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 120px;
+   }
+   &__subtitle {
+      margin-bottom: 27px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+   }
+   &__buttons {
+      margin-bottom: 100px;
+   }
+   &__btn {
+      &:not(:last-child) {
+         margin-right: 35px;
+      }
+   }
+}
+
+.gallery {
+   padding: 120px 0 110px;
+   &__box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 22px 30px;
+   }
+   &__image:nth-child(1) {
+      grid-column: span 2;
+   }
+   &__image:nth-child(2) {
+      grid-column: span 2;
+      grid-row: span 2;
+   }
+}
+.mens,
+.womens {
+   &__title,
+   &__subtitle {
+      text-align: center;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+   &__item {
+      flex: 0 1 24%;
+      transition: all 0.3s;
+      &:hover {
+         transform: scale(1.1);
+         transform: translateY(-4px);
+      }
+      img {
+         margin-bottom: 30px;
+      }
+      &-overhead {
+         margin-bottom: 3px;
+         font-weight: 300;
+      }
+      &-title {
+         margin-bottom: 3px;
+         font-weight: 600;
+      }
+      span {
+         &:nth-child(1) {
+            margin-right: 25px;
+            text-decoration: line-through;
+         }
+         &:nth-child(2) {
+            color: #cf2929;
+         }
+      }
+   }
+}
+
+.style {
+   &__title {
+      text-align: center;
+   }
+   &__subtitle {
+      text-align: center;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__item {
+      flex-basis: 50%;
+      position: relative;
+      // text-align: center;
+      img {
+         &:nth-child(1) {
+            margin-bottom: 74px;
+         }
+         &:nth-child(2) {
+            position: absolute;
+            bottom: 40px;
+            right: -50px;
+            border: 25px solid #fff;
+         }
+      }
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+   }
+   &__link {
+      padding-bottom: 7px;
+      margin-right: 100px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #000;
+   }
+}
+.tachen {
+   height: 100vh;
+   background: url(../images/tachen-bg.jpg) no-repeat center center / cover;
+   &__wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: flex-end;
+   }
+   &__overhead {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+   }
+   &__title {
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 120px;
+   }
+   &__btn {
+      margin-bottom: 130px;
+   }
+}
+.footer {
+   padding-top: 115px;
+   background-color: #f2f8fc;
+   &__copy {
+      padding: 35px 0;
+      text-align: center;
+      background-color: #e7f5f8;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+   }
+   &__item {
+      flex: 0 1 49%;
+      &:nth-child(2) {
+         max-width: 530px;
+      }
+   }
+   &__logo {
+      margin-bottom: 17px;
+   }
+   &__text {
+      width: 400px;
+      margin-bottom: 40px;
+   }
+   &__address {
+      margin-bottom: 15px;
+      padding-left: 40px;
+      font-style: normal;
+      background: url(../images/location.svg) no-repeat left center;
+   }
+   &__mail {
+      margin-bottom: 7px;
+      border-bottom: 1px solid #000;
+   }
+   &__phone {
+      display: block;
+      margin-bottom: 15px;
+   }
+   &__socials {
+      &-list {
+         display: flex;
+         li {
+            width: 17px;
+            height: 17px;
+            &:not(:last-child) {
+               margin-right: 20px;
+            }
+         }
+      }
+   }
+   &__title {
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 37px;
+   }
+   &__menu {
+      display: flex;
+      justify-content: space-between;
+      &-title {
+         margin-bottom: 27px;
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 30px;
+      }
+      &-link {
+         margin-bottom: 17px;
+      }
+   }
+   &__form {
+      margin-bottom: 70px;
+      position: relative;
+      input {
+         width: 100%;
+         padding: 11px 24px;
+         border: none;
+         background: #ffffff;
+         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+         border-radius: 5px;
+         &::placeholder {
+            font-size: 15px;
+            line-height: 22px;
+            color: #22262a;
+         }
+      }
+      button {
+         position: absolute;
+         right: 20px;
+         top: 50%;
+         font-weight: 600;
+         text-transform: uppercase;
+         border: none;
+         background-color: transparent;
+         transform: translateY(-50%);
+         cursor: pointer;
+      }
+   }
+}
+
+@import "media";
+// @import "../../node_modules/slick-carousel/slick/slick";
+// @import "../../node_modules/magnific-popup/dist/magnific-popup";
